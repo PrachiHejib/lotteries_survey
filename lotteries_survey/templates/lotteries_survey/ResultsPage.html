@@ -11,6 +11,13 @@
 
     <p> The lottery you have chosen is {{ player.lotterychoice }}.</p>
 
+    {% if player.dieroll <= 10 and lotterychoice == A %}
+        <p> Your payoff is £0 </p>
+    {%  else %}
+        <p>Your payoff is £20 </p>
+    {% endif %}
+
+
     {% next_button %}
 {% include "global/Footer.html" %}
 {% endblock %}
